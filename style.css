@@ -1,0 +1,11 @@
+html,
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eaf2e3;
+}
+
+/*# sourceMappingURL=style.css.map */

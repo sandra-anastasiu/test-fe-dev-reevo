@@ -17,10 +17,22 @@
             sizes="16x16"
             href="assets/favicon-16x16.png"
         />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="main-container">
-            <canvas class="main-container-canvas"></canvas>
+        <div class="stats">
+            <div
+                class="number-of-current-shapes"
+                id="js-number-of-current-shapes"
+            >
+                Number of current Shapes: 0
+            </div>
+            <div class="total-area" id="js-total-area">Total area: 0</div>
         </div>
+        <div class="main-container" id="app"></div>
+        <div class="controls">
+            <div class="shapes-per-second"></div>
+        </div>
+        <script type="module" src="index.js"></script>
     </body>
 </html>
