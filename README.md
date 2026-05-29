@@ -1,45 +1,32 @@
 # test-fe-dev-reevo
 
-Simple frontend project for the Reevo interview, built with HTML, SCSS, static assets, PixiJS for canvas rendering, and Vite.
+Frontend project for the Reevo interview. Shapes fall from the top of a canvas, respond to clicks, and can be controlled via gravity and spawn rate.
 
-## Requirements
+Built with PixiJS, SCSS, and Vite.
 
-- Node.js
-- npm
-
-## Installation
+## Setup
 
 ```bash
 npm install
-```
-
-## Development
-
-```bash
 npm run dev
 ```
 
 ## Scripts
 
-- `npm run sass` - compiles `style.scss` to `style.css` and watches for changes
-- `npm run serve` - starts the local development server with live-server
-- `npm run dev` - starts the app with Vite
-- `npm run lint` - runs ESLint on source files
-- `npm run format` - formats the project with Prettier
-- `npm run build` - builds the app with Vite
-
-## Project Structure
-
-- `index.html` - main page
-- `style.scss` - source stylesheet
-- `style.css` - generated stylesheet
-- `assets/` - images and favicon files
+| Script                 | Description                         |
+| ---------------------- | ----------------------------------- |
+| `npm run dev`          | Start Vite dev server               |
+| `npm run build`        | Build for production                |
+| `npm run sass`         | Compile `style.scss` to `style.css` |
+| `npm run lint`         | Run ESLint on `src/`                |
+| `npm run lint:css`     | Run Stylelint on `style.scss`       |
+| `npm run lint:css:fix` | Auto-fix CSS property order         |
+| `npm run format`       | Format with Prettier                |
 
 ## Notes
 
-- `style.css` is generated from `style.scss`
-- Vite is installed as a dev dependency
-- The page is intended for the Reevo interview test
+- `style.css` is generated from `style.scss`, do not edit it directly
+- `docs/` mirrors `dist/` for GitHub Pages
 
 ## PixiJS
 

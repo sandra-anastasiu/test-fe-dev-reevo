@@ -1,11 +1,122 @@
 html,
 body {
-  margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background: #eaf2e3;
+  margin: 0;
+  overflow: hidden;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  background: #f3f3f3;
+}
+
+.main-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100vh;
+  padding: 10px 14px;
+}
+.main-container .brand-logo {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  margin: 0;
+}
+.main-container .brand-logo img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+.main-container .stats {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.main-container .stats .number-of-current-shapes,
+.main-container .stats .total-area {
+  white-space: nowrap;
+}
+.main-container .stats .total-area {
+  flex: 0 0 290px;
+  width: 290px;
+}
+.main-container .pixi-container {
+  min-height: 0;
+  overflow: hidden;
+}
+.main-container .controls {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+.main-container .controls button {
+  height: 30px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1px;
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #bd0808;
+  border: none;
+  border-radius: 10px;
+}
+.main-container .controls button:not(:disabled):hover {
+  color: #bd0808;
+  background-color: #ffd700;
+}
+.main-container .controls button:disabled {
+  color: #666;
+  cursor: not-allowed;
+  background: #b8b8b8;
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 2em;
+  }
+  body .main-container {
+    justify-content: center;
+  }
+  body .main-container .stats,
+  body .main-container .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+  body .main-container .stats .total-area,
+  body .main-container .controls .total-area {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  html,
+  body {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  body {
+    font-size: 1em;
+  }
+  body .main-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 6px 10px;
+    gap: 8px;
+  }
+  body .main-container .brand-logo img {
+    max-width: 120px;
+  }
+  body .main-container .stats,
+  body .main-container .controls {
+    gap: 4px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
